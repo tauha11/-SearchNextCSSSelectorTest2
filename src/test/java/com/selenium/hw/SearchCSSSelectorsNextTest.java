@@ -23,20 +23,14 @@ public class SearchCSSSelectorsNextTest {
     }
     @Test
     public void TestMenuNext(){
-
-        wd.findElement(By.cssSelector("[class=\"HeaderFlag flagBackground flag-UnitedKingdom \"]")).click();
         wd.findElement(By.cssSelector("[class=\"dk_toggle dk_label\"]")).click();
-        wd.findElement(By.cssSelector("[class=\"dk_dropdown_option highlight\"]")).click();
-        //wd.findElement(By.cssSelector("[class=\"HeaderFlag_small flagBackground flag-Israel\"]")).click();
-
-
-//        wd.findElement(By.cssSelector("[value=\"English\"]")).click();
+        wd.findElement(By.cssSelector("[data-language=\"en\"]")).click();
         wd.findElement(By.cssSelector("#btnFlagSelectorShopNow")).click();
         wd.findElement(By.cssSelector("#sli_search_1")).sendKeys("dress baby" + Keys.ENTER);
-        wd.findElement(By.cssSelector("[class=\"Desc\"]")).click();
-
-        //String Text = wd.findElement(By.cssSelector("div h1")).getText();
-        //System.out.println(Text);
+        wd.findElement(By.cssSelector("span[class=\"Desc\"]")).click();
+        String Text = wd.findElement(By.cssSelector("div h1")).getText();
+        System.out.println(Text);
+        wd.findElement(By.cssSelector("[class=\"heart add desktop\"]")).click();
     }
 
     @AfterMethod(enabled = false)
